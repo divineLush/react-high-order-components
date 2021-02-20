@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 
+import UserList from './components/user-list/user-list.jsx';
+import UserProfile from './components/user-profile/user-profile.jsx';
+
+// high order component is a function
+// that gets a component and returns a new enhanced component
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserList />
+      <UserProfile name="divine" email="divine@email.com" />
     </div>
   );
 }
